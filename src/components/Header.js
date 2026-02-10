@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/main-pic.jpg';
 
 const Header = ({ onLogin, isLoggedIn }) => {
   return (
     <header className="portfolio-header">
-      <img 
-        src="https://via.placeholder.com/150" // Replace with your photo URL
-        alt="Professional photo of Alex Johnson" 
-      />
+      <img src={logo} alt="Parockson portfolio logo " />
       <h1>Alex Johnson</h1>
       <p>Data Analyst & Business Intelligence Specialist</p>
       <p>
