@@ -1,0 +1,13 @@
+.portfolio-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  @include responsive(mobile) {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+}
