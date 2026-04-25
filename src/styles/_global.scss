@@ -1,9 +1,9 @@
 :root {
   --bg-color: #1a1a1a;
   --text-color: #d7d7d7;
-  --heading-color: #ed1944;
+  --heading-color: #6ee7b7;
   --card-bg: #262626;
-  --accent-color: #ed1944;
+  --accent-color: #6ee7b7;
   --secondary-gray: #727576;
   --border-color: rgba(255, 255, 255, 0.1);
 }
@@ -11,9 +11,9 @@
 body.light-mode {
   --bg-color: #ffffff;
   --text-color: #2d2d2d; // Dark charcoal for better visibility
-  --heading-color: #ed1944;
+  --heading-color: #059669; // Darker green for light mode
   --card-bg: #f9f9f9;
-  --accent-color: #ed1944;
+  --accent-color: #059669;
   --secondary-gray: #555555; // Darker gray for visibility
   --border-color: rgba(0, 0, 0, 0.1);
 }
