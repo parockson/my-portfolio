@@ -1,49 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './styles/main.scss';
 import Header from './components/Header';
-import Introduction from './components/Introduction';
 import Purpose from './components/Purpose';
+import Education from './components/Education';
 import Projects from './components/Projects';
-import Gallery from './components/Gallery';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
 import Resume from './components/Resume';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import Admin from './components/Admin';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
-  const handleLogin = () => {
-    const password = prompt('Enter admin password:');
-    if (password === 'admin') {  // Change this password!
-      setIsLoggedIn(true);
-    } else {
-      alert('Incorrect password');
-    }
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
+
+  useEffect(() => {
+    document.body.className = theme + '-mode';
+  }, [theme]);
 
   return (
     <Router>
-      <div className="App">
-        <Header onLogin={handleLogin} isLoggedIn={isLoggedIn} />
+      <div className={`App ${theme}-mode`}>
+        <Header theme={theme} toggleTheme={toggleTheme} />
         <Routes>
           <Route path="/" element={
             <div className="container">
-              <Introduction />
               <Purpose />
+              <Education />
               <Projects />
-              <Gallery />
               <Skills />
               <Achievements />
               <Resume />
-              <Testimonials />
               <Contact />
             </div>
           } />
-          {isLoggedIn && <Route path="/admin" element={<Admin />} />}
         </Routes>
       </div>
     </Router>

@@ -1,13 +1,150 @@
 .portfolio-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: $white;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+
+  h2 {
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+    @include responsive(mobile) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: var(--text-color);
+    line-height: 1.8;
+  }
+
+  .skills-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    div {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    h3 {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+      margin-top: 1.5rem;
+    }
+  }
 
   @include responsive(mobile) {
-    margin: 1rem;
-    padding: 0.5rem;
+    margin: 2rem 0;
+    padding: 0 1.5rem;
   }
+}
+
+.experience-item {
+  margin-bottom: 3rem;
+  
+  h3 {
+    margin: 0;
+    color: var(--heading-color);
+    @include responsive(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+  
+  h4 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .status {
+    font-style: italic;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+
+    span {
+      font-size: 0.85rem;
+      color: var(--secondary-gray);
+    }
+
+    @include responsive(mobile) {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+  }
+
+  ul {
+    margin-top: 1rem;
+    li {
+      font-size: 0.95rem;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+  }
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  .cert-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: $border-radius;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    strong {
+      color: var(--heading-color);
+      font-size: 1rem;
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: var(--secondary-gray);
+    }
+  }
+}
+
+.column-text {
+  column-count: 1;
+  line-height: 1.8;
 }
