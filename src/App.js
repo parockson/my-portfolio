@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const [colorTheme, setColorTheme] = useState(localStorage.getItem('colorTheme') || 'theme-1');
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -20,13 +21,19 @@ function App() {
   };
 
   useEffect(() => {
-    document.body.className = theme + '-mode';
-  }, [theme]);
+    document.body.className = `${theme}-mode ${colorTheme}`;
+    localStorage.setItem('colorTheme', colorTheme);
+  }, [theme, colorTheme]);
 
   return (
     <Router>
-      <div className={`App ${theme}-mode`}>
-        <Header theme={theme} toggleTheme={toggleTheme} />
+      <div className={`App ${theme}-mode ${colorTheme}`}>
+        <Header 
+          theme={theme} 
+          toggleTheme={toggleTheme} 
+          colorTheme={colorTheme} 
+          setColorTheme={setColorTheme} 
+        />
         <Routes>
           <Route path="/" element={
             <div className="container">

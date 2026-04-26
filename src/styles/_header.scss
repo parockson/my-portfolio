@@ -25,8 +25,12 @@
       font-family: $font-family;
       text-transform: none;
 
-      span {
-        color: var(--accent-color);
+      span.gradient-text {
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
       }
 
       @include responsive(mobile) {
@@ -41,6 +45,45 @@
       margin-bottom: 2.5rem;
       max-width: 600px;
       text-align: left;
+    }
+
+    .theme-selection {
+      margin-bottom: 2.5rem;
+      
+      p {
+        font-size: 0.9rem;
+        color: var(--secondary-gray);
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+
+      .theme-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .theme-btn {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 2px solid transparent;
+          cursor: pointer;
+          transition: transform 0.2s ease, border-color 0.2s ease;
+          padding: 0;
+          
+          &.active {
+            border-color: var(--text-color);
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
 
     .hero-links {
@@ -69,9 +112,11 @@
       position: absolute;
       width: 420px;
       height: 420px;
-      background: #2a0a0e; // Deep dark red background
+      background: var(--accent-start); // Dynamic background
+      opacity: 0.2;
       border-radius: 24px;
       z-index: 1;
+      filter: blur(40px); // Softer glow effect
       
       // The red swish effect
       &::after {

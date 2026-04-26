@@ -1,20 +1,40 @@
 :root {
   --bg-color: #1a1a1a;
   --text-color: #d7d7d7;
-  --heading-color: #ed1944;
+  --heading-color: var(--accent-color);
   --card-bg: #262626;
-  --accent-color: #ed1944;
+  --accent-color: #FF512F;
   --secondary-gray: #727576;
   --border-color: rgba(255, 255, 255, 0.1);
+  
+  // Theme Gradients
+  --theme-1-start: #FF512F; --theme-1-end: #DD2476; // Sunset Bliss
+  --theme-2-start: #2193b0; --theme-2-end: #6dd5ed; // Ocean Wave
+  --theme-3-start: #11998e; --theme-3-end: #38ef7d; // Emerald Glow
+  --theme-4-start: #8e2de2; --theme-4-end: #4a00e0; // Royal Purple
+  --theme-5-start: #f2994a; --theme-5-end: #f2c94c; // Golden Hour
+  --theme-6-start: #654ea3; --theme-6-end: #eaafc8; // Cosmic Night
+
+  // Active theme defaults (Theme 1)
+  --accent-start: var(--theme-1-start);
+  --accent-end: var(--theme-1-end);
+  --accent-color: var(--theme-1-start);
+  --primary-gradient: linear-gradient(135deg, var(--accent-start), var(--accent-end));
 }
+
+body.theme-1 { --accent-start: var(--theme-1-start); --accent-end: var(--theme-1-end); --accent-color: var(--theme-1-start); }
+body.theme-2 { --accent-start: var(--theme-2-start); --accent-end: var(--theme-2-end); --accent-color: var(--theme-2-start); }
+body.theme-3 { --accent-start: var(--theme-3-start); --accent-end: var(--theme-3-end); --accent-color: var(--theme-3-start); }
+body.theme-4 { --accent-start: var(--theme-4-start); --accent-end: var(--theme-4-end); --accent-color: var(--theme-4-start); }
+body.theme-5 { --accent-start: var(--theme-5-start); --accent-end: var(--theme-5-end); --accent-color: var(--theme-5-start); }
+body.theme-6 { --accent-start: var(--theme-6-start); --accent-end: var(--theme-6-end); --accent-color: var(--theme-6-start); }
 
 body.light-mode {
   --bg-color: #ffffff;
-  --text-color: #2d2d2d; // Dark charcoal for better visibility
-  --heading-color: #ed1944;
+  --text-color: #2d2d2d; 
+  --heading-color: var(--accent-color);
   --card-bg: #f9f9f9;
-  --accent-color: #ed1944;
-  --secondary-gray: #555555; // Darker gray for visibility
+  --secondary-gray: #555555;
   --border-color: rgba(0, 0, 0, 0.1);
 }
 
