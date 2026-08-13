@@ -37,8 +37,7 @@ const Contact = () => {
     <section className="portfolio-section" id="contact">
       <h2>Contact</h2>
       <p>Ready to collaborate on your next data project? Let's connect!</p>
-      <p>Email me at <a href="mailto:parockson@gmail.com">parockson@gmail.com</a> or message me on <a href="https://linkedin.com/in/parockson" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
-      <p>View my full GitHub for code samples and more projects: <a href="https://github.com/parockson" target="_blank" rel="noopener noreferrer">github.com/parockson</a>.</p>
+      <p>Kindly fill the form below to send me a direct mail.</p>
       
       <form 
         className="contact-form" 
