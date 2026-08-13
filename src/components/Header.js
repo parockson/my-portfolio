@@ -14,9 +14,9 @@ const Header = ({ theme, toggleTheme, colorTheme, setColorTheme }) => {
   return (
     <header className="portfolio-hero">
       <div className="hero-content">
-        <h1>Hey 👋, I am <br /><span className="gradient-text">Prince Rockson</span></h1>
+        <h1>Hello, I am <span className="gradient-text">Prince Acquah Rockson</span></h1>
         <p className="hero-bio">
-          Prince Rockson is a data analyst, data scientist, and web developer with a background in health informatics, AI, and machine learning, dedicated to turning complex data into meaningful insights and real-world solutions. 
+          Data Scientist &amp; Analyst | Health Informatics | Fintech | Computational Biology | Explainable AI
         </p>
         
         <div className="theme-selection">

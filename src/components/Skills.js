@@ -6,25 +6,28 @@ const Skills = () => {
       <h2>Skills and Languages</h2>
       <div className="skills-container">
         <div>
-          <h3>Computational Research & Data Science</h3>
+          <h3>Computational Research &amp; Data Science</h3>
           <ul>
-            <li><strong>Languages:</strong> Python (Advanced: NumPy, Pandas, Scikit-learn, XGBoost, Matplotlib, Seaborn), R (Statistical Modeling), SQL (PostgreSQL, MySQL).</li>
+            <li><strong>Languages:</strong> Python (Advanced: NumPy, Pandas, Scikit-learn, XGBoost, Matplotlib, Seaborn), R (Statistical Modelling), SQL (PostgreSQL, MySQL).</li>
             <li><strong>Statistical Analysis:</strong> SPSS, Stata, PLS-SEM, Excel.</li>
-            <li><strong>Specialized AI:</strong> Machine Learning Model Validation (Bootstrapping, Cross-Validation), Explainable AI (SHAP/LIME).</li>
+            <li><strong>Specialised AI:</strong> Machine Learning Model Validation (Bootstrapping, Cross-Validation), Explainable AI (SHAP/LIME).</li>
+            <li><strong>Data Visualisation &amp; Business Intelligence:</strong> Power BI, Advanced Excel (VBA/Macros), Tableau.</li>
           </ul>
         </div>
         <div>
-          <h3>Software Engineering & Deployment</h3>
+          <h3>Software Engineering &amp; Deployment</h3>
           <ul>
-            <li><strong>Web & App:</strong> React JS/TS, Node.js, Streamlit (for ML Dashboarding).</li>
-            <li><strong>DevOps & Infrastructure:</strong> Git/GitHub, Netlify, Render, Railway, Vercel.</li>
+            <li><strong>Web &amp; App:</strong> React JS/TS, Node.js, Streamlit (for ML Dashboarding).</li>
+            <li><strong>DevOps &amp; Infrastructure:</strong> Git/GitHub, Netlify, Render, Railway, Vercel.</li>
             <li><strong>IT Architecture:</strong> ITIL Frameworks, Cloud Computing Service Lifecycle.</li>
           </ul>
         </div>
         <div>
-          <h3>Data Visualization & Business Intelligence</h3>
+          <h3>Wet-Lab, Molecular Biology &amp; Biotechnology</h3>
           <ul>
-            <li><strong>Tools:</strong> Power BI, Advanced Excel (VBA/Macros), Tableau.</li>
+            <li><strong>Laboratory Techniques:</strong> PCR, gel electrophoresis, DNA extraction, sample preparation, microscopy, aseptic technique, media preparation, serial dilution, and basic microbiological culture handling.</li>
+            <li><strong>Molecular Biology &amp; Biotechnology:</strong> Genomic analysis, molecular diagnostics support, biotechnology research protocols, biological sample handling, and experimental documentation.</li>
+            <li><strong>Medical Laboratory Practice:</strong> Laboratory safety, specimen reception and processing, quality control, reagent preparation, equipment maintenance, and accurate laboratory record keeping.</li>
           </ul>
         </div>
         <div>

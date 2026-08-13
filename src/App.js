@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './styles/main.scss';
 import Header from './components/Header';
+import Introduction from './components/Introduction';
 import Purpose from './components/Purpose';
 import Education from './components/Education';
 import Projects from './components/Projects';
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div className="container">
+              <Introduction />
               <Purpose />
               <Education />
               <Projects />
